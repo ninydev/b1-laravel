@@ -1,11 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.adminus')
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Admin panel</div>
+                <div class="card-header">Admin panel - Работа с постами</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +14,11 @@
                         </div>
                     @endif
 
-                    Вы вошли в админку стандартную
+Работа с постами
+@foreach ($posts as $post)
+  {{ $post->title }}
+@endforeach
+
                 </div>
             </div>
         </div>

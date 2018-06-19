@@ -17,4 +17,38 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
+
+/*
+Route::get('/adminus', function () {
+    return view('welcome');
+});
+*/
+
+Route::group([
+    'prefix' =>'adminus',
+    'namespace'=> 'Adminus',
+    'middleware'=> ['auth']
+    ],
+    function (){
+            Route::get('/','controllerDashBoardus@index')->name('adminus.index');
+            Route::get('/statisticus','controllerDashBoardus@statisticus')->name('adminus.statisticus');
+            Route::get('/post','controllerPost@index')->name('post.index');
+    }
+);
+
+
+
+/*
+
+
+Route::group([
+    'prefix' =>'admin',
+    'namespace'=> 'Admin',
+    'middeleware'=> ['auth']
+    ],
+    function (){
+        Route::get ('/', 'Dashboard@pageWelcome')->name('admin.index');
+    });
+
+*/

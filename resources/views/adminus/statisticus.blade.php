@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Admin panel</div>
+                <div class="card-header">Admin panel - Статистика</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    Вы вошли в админку стандартную
+                    Вы вошли в админку нашу, на страницу статистики
                 </div>
             </div>
         </div>
