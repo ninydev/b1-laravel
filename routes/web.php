@@ -34,6 +34,7 @@ Route::group([
             Route::get('/','controllerDashBoardus@index')->name('adminus.index');
             Route::get('/statisticus','controllerDashBoardus@statisticus')->name('adminus.statisticus');
             Route::get('/post','controllerPost@index')->name('post.index');
+            Route::get('/category','controllerCategory@index')->name('category.index');
     }
 );
 

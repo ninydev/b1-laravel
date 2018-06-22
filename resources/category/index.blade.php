@@ -14,10 +14,7 @@
                         </div>
                     @endif
 
-<h3>Работа с постами</h3>
-@foreach ($posts as $post)
-  {{ $post->title }}<br/>
-@endforeach
+Работа с категориями
 
                 </div>
             </div>

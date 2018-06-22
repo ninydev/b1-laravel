@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Adminus;
 
-use App\Post;
+use App\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class controllerPost extends Controller
+class controllerCategory extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,20 +16,6 @@ class controllerPost extends Controller
     public function index()
     {
         //
-        // $data['posts'] = Post::all();
-        $data['posts']  = Post::where('autor_id', 2)
-                       ->orderBy('title', 'desc')
-                       ->take(2)
-                       ->get();
-        /*
-        where('active', 1)
-               ->orderBy('name', 'desc')
-               ->take(10)
-               ->get();
-        */
-
-
-        return view('post.index', $data);
     }
 
     /**
@@ -56,10 +42,10 @@ class controllerPost extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Post  $post
+     * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show(Category $category)
     {
         //
     }
@@ -67,10 +53,10 @@ class controllerPost extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Post  $post
+     * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit(Category $category)
     {
         //
     }
@@ -79,10 +65,10 @@ class controllerPost extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Post  $post
+     * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update(Request $request, Category $category)
     {
         //
     }
@@ -90,10 +76,10 @@ class controllerPost extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Post  $post
+     * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy(Category $category)
     {
         //
     }
